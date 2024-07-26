@@ -1,0 +1,178 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: Georgia;
+}
+.contendor{
+    width: 100%;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+.header-contenido{
+    position: relative;
+    z-index: 100;
+}
+.logo{
+    font-weight: 900;/*grosor*/
+    font-size: 40px;
+    margin: 2px;
+    padding: 20px;
+    font-family: Cambria;
+    color: white;
+}
+.banner{
+    height: 50vh;/*ocupa la mitad de la pagina*/
+    position: relative;
+    background: url('../img/banner1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: -60px;
+}
+.banner-descripcion{
+    position: absolute;/*dentro del banner*/
+    text-align: center;
+    color: #fff;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;/*ocupa todo el ancho*/
+    font-size: 15px;
+    margin-top: 25px;
+}
+.button-banner{
+    background: #cd50d1;
+    border: none;
+    padding: 12px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.button-banner:hover{
+    border: 2px solid #cd50d1;
+    background: none;/*desaparece el fondo del boton*/
+}
+.galeria h1{
+    font-size: 40px; 
+    text-align: center;   
+}
+.galeria{
+    margin: 20px;/*borde*/
+}
+.team h1{
+    font-size: 40px;
+    text-align: center;
+}
+.team{
+    background: #f6f6f6;
+    padding: 30px;
+}
+.team-columna img{
+    border-radius: 50%;
+}
+.team p{
+    text-align: justify;
+}
+.team-grid{
+    display: grid;
+    grid-gap: 30px;
+}
+.info h1{
+    color: #cd50d1;
+    font-size: 30px;
+}
+.info{
+    text-align: center;
+}
+.info-columna{
+    margin: 20px;
+}
+.info .contenedor{
+    display: grid;
+    grid-gap: 10px;
+}
+.banner2{
+    height: 50vh;/*ocupa la mitad de la pagina*/
+    position: relative;
+    background: url('../img/banner1.jpeg');
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    color: #fff;
+}
+.banner2 h1{
+    font-size: 28px;
+}
+.banner2-descripcion{
+    position: absolute;/*dentro del banner*/
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+.footer{
+    background: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/*adaptar a pcs*/
+@media(min-width: 520px){
+    .banner h1{
+        font-size: 30px;
+    }
+    .grid{
+        display: grid;
+        grid-gap: 10px;/*margen*/
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team .team-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info .contenedor{
+        grid-template-columns: repeat(3, 150px);
+        justify-content: space-around;
+    }
+
+    .banner2 h1{
+        font-size: 50px;
+    }
+    .banner2 p{
+        font-size: 25px;
+    }
+}
+
+@media(min-width: 728px){
+    .team .team-grid{
+        grid-template-columns: repeat(4, 195px);
+        justify-content: space-around;
+    }
+}
+
+@media(min-width: 1024px){
+    .contenedor{
+        width: 1000px;
+    }
+    .banner h1{
+        font-size: 45px;
+    }
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+        grid-auto-flow: dense;/*tape los espacios en blanco*/
+        grid-auto-rows: 160px;
+    }
+    .big{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .banner2 p{
+        font-size: 30px;
+    }
+}
